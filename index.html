@@ -6,33 +6,37 @@
         <link rel="stylesheet" href="css/styles.css">
         <script src="utils/index.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+        <script>
+            document.getElementById('bottime').innerHTML = moment().format('h:mm a');
+        </script>
     </head>
     <body>
         <div class="chat-container">
             <header class="chat-header">
                 <h1>Chat</h1>
-                <a href="index.html" class="btn">Leave Room</a>
+                <h3>Username: <input class="username" id="usernameInput" value="New User" type="text" onchange="usernameChange()" placeholder="Enter Username..." autocomplete="off"/></h3>
             </header>
             <main class="chat-main">
                 <div class="chat-sidebar">
                     <h3>Users</h3>
                     <ul id="users">
-                        <li>User </li>
+                        <li>New User </li>
                     </ul>
                 </div>
                 <div class="chat-messages">
                     <div class="message">
-                        <p class="meta">Bot <span>12:00 pm</span></p>
-                        <p class="text">Welcome, User!<p>
+                        <p style="color: var(--theme-color)" class="meta">Bot</p>
+                        <p class="text">Welcome, <b>@New User</b>!<p>
                     </div>
                 </div>
             </main>
             <div class="chat-form-container">
                 <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
 
+
                 <form target="dummyframe">
-                    <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off"/>
-                    <button class="btn" id="submit" onclick="outputMessages('User',document.getElementById('msg').value,moment().format('h:mm a'));">Send</button>
+                    <input id="msg" type="text" placeholder="Enter Message..." required autocomplete="off"/>
+                    <button class="btn" id="submit" onclick="outputMessages(document.getElementById('usernameInput').value, document.getElementById('msg').value,moment().format('h:mm a'))">Send</button>
                 </form>
             </div>
         </div>

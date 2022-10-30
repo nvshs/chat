@@ -4,6 +4,7 @@
 	--dark-color-a: #23272A;
 	--dark-color-b: #2C2F33;
 	--dark-color-c: #36393E;
+	--dark-color-d: #A3A6AA;
 	--light-color: #FFFFFF;
 	--theme-color: #5865F2;
 	--success-color: #5cb85c;
@@ -53,6 +54,11 @@ a {
     background-color: var(--theme-color);
     box-shadow: 0px 3px 8px 1px var(--theme-color);
 }
+
+.icons {
+	transform: translate(0em, 4px)
+}
+
 
 /* Chat Page */
 
@@ -165,11 +171,29 @@ a {
 	background: var(--dark-color-c);
     color: var(--light-color);
 }
+
 .chat-form-container input[type='text']:focus {
     box-shadow: 0px 0px 5px 2px var(--theme-color);
 }
 .chat-form-container input[type='text']::placeholder {
     color: var(--light-color);
+}
+
+.username {
+	font-size: 16px;
+	margin-right: 15px;
+	outline: none;
+    border: 0 none;
+    border-radius: 5em;
+    padding: 10px 20px;
+	height: 40px;
+	transition: all 0.25s ease-in-out;
+	background: var(--dark-color-c);
+    color: var(--light-color);
+}
+
+.username:focus {
+    box-shadow: 0px 0px 5px 2px var(--theme-color);
 }
 
 /* Scroll Bar */
