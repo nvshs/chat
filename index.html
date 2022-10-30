@@ -5,11 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styles.css">
         <script src="utils/index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     </head>
     <body>
         <div class="chat-container">
             <header class="chat-header">
-                <h1>NVSHS Chat</h1>
+                <h1>Chat</h1>
                 <a href="index.html" class="btn">Leave Room</a>
             </header>
             <main class="chat-main">
@@ -31,9 +32,11 @@
                 </div>
             </main>
             <div class="chat-form-container">
-                <form id="chat-form">
+                <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+
+                <form target="dummyframe">
                     <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off"/>
-                    <button class="btn">Send</button>
+                    <button class="btn" id="submit" onclick="outputMessages(`User #${Math.floor(Math.random() * 100)}`,document.getElementById('msg').value,moment().format('h:mm a'));">Send</button>
                 </form>
             </div>
         </div>
