@@ -172,6 +172,24 @@ a {
     color: var(--light-color);
 }
 
+/* Scroll Bar */
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+	background: var(--dark-color-b); 
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--dark-color-a); 
+	border-radius: 10px;
+}
+
+/* Screen Size */
+
 @media (max-width: 700px) {
 	.chat-main {
 		display: block;

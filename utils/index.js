@@ -9,9 +9,10 @@ function outputMessages(username, text, time) {
     html += '</div>';
 
     messageContainer.insertAdjacentHTML('beforeend', html);
-    messageBox.value = '';
+    messageContainer.scrollTop = messageContainer.scrollHeight;
 
     document.querySelector('.message:last-child').scrollIntoView({
         behavior: 'smooth'
     });
+    messageBox.value = '';
 }
