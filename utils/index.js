@@ -1,7 +1,7 @@
 function usernameChange() {
     const usernameInput = document.getElementById('usernameInput').value;
     if (usernameInput.length > 2){
-        var username = usernameInput;
+        document.getElementById('usernameInput').value = username;
     }
     if (usernameInput.includes("<") || usernameInput.includes(">")){
         document.getElementById('usernameInput').value = "New User";

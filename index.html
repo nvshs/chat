@@ -6,9 +6,6 @@
         <link rel="stylesheet" href="css/styles.css">
         <script src="utils/index.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-        <script>
-            document.getElementById('bottime').innerHTML = moment().format('h:mm a');
-        </script>
     </head>
     <body>
         <div class="chat-container">
@@ -35,7 +32,7 @@
 
 
                 <form target="dummyframe">
-                    <input id="msg" type="text" placeholder="Enter Message..." required autocomplete="off"/>
+                    <input id="msg" type="text" placeholder="Enter Message..." autocomplete="off"/>
                     <button class="btn" id="submit" onclick="outputMessages(document.getElementById('usernameInput').value, document.getElementById('msg').value,moment().format('h:mm a'))">Send</button>
                 </form>
             </div>
