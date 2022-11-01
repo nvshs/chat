@@ -17,23 +17,22 @@ function outputMessages(username, text, time) {
         var username = username.replace("adminaccess","");
         
         if (text.startsWith('!')) {
-            //if (text == '!'){
-            //    if (text == '!test '){
-            //        var html = '';
-            //          html += '<div class="message">';
-            //          html += `<p style="color: var(--error-color)" class="meta">${username} <span style="color: var(--dark-color-d)">${time}</span></p>`;
-            //          html += '<p class="text">' + test1[1].join(" ") +'</p>';
-            //          html += '</div>';
-            //  
-            //        messageContainer.insertAdjacentHTML('beforeend', html);
-            //        messageContainer.scrollTop = messageContainer.scrollHeight;
-            //    
-            //        document.querySelector('.message:last-child').scrollIntoView({
-            //            behavior: 'smooth'
-            //        });
-            //        messageBox.value = '';
-            //    }
-            //}
+            if (text.startsWith('!echo ')){
+                text.replace('!echo ', ''); 
+                html = '';
+                html += `<div class="message">`;
+                html += `<p style="color: var(--theme-color)" class="meta">Bot <span style="color: var(--dark-color-d)">${time}</span></p>`;
+                html += `<p class="text">${text.replace('!echo ', '')}</p>`;
+                html += `</div>`;
+              
+                messageContainer.insertAdjacentHTML('beforeend', html);
+                messageContainer.scrollTop = messageContainer.scrollHeight;
+                
+                document.querySelector('.message:last-child').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                messageBox.value = '';
+            }
         } else {
             if (text.length > 0){
                 var html = '';
