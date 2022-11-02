@@ -56,11 +56,11 @@ a {
 }
 
 .disabled-btn {
-	cursor: pointer;
+	cursor: auto;
 	padding: 10px 20px;
 	background: var(--dark-color-c);
    	color: var(--light-color);
-    border: 0;
+    	border: 0;
 	font-size: 17px;
 	font-weight: 500;
 	outline: 0 none;
